@@ -1,20 +1,21 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 class Search extends Component {
   state = {
-    searchTerm: null
+    searchTerm: ''
   };
 
   handleChange = (e) => {
     e.persist()
     this.setState(state => {
       return {
+        state,
         [e.target.name]: e.target.value
-      };
-    });
-  };
+      }
+    })
+  }
 
   handleSubmit = (e) => {
     e.preventDefault()
@@ -24,7 +25,7 @@ class Search extends Component {
 
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <FormWrapper>
           <Label htmlFor="search">Search for weather by city</Label>
           <Input
@@ -36,13 +37,13 @@ class Search extends Component {
           <button type="submit">Search</button>
         </FormWrapper>
       </form>
-    );
+    )
   }
 }
 
 Search.propTypes = {
   handleSearch: PropTypes.func
-};
+}
 
 const FormWrapper = styled.div`
   display: flex;
@@ -61,4 +62,4 @@ const Input = styled.input`
   text-align: center;
 `
 
-export default Search;
+export default Search

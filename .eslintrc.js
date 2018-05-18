@@ -3,12 +3,9 @@ module.exports = {
     "browser": true,
     "es6": true
   },
-  "processors": ["stylelint-processor-styled-components"],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "stylelint-config-standard",
-    "stylelint-config-styled-components"
+    "plugin:react/recommended"
   ],
   "parser": "babel-eslint",
   "parserOptions": {
