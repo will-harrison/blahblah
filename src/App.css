@@ -1,0 +1,45 @@
+:root {
+  --light-blue:  #4A90E2;
+  --med-blue:  #367CD6;
+  --dark-blue: #183968;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--light-blue), var(--med-blue), var(--dark-blue));
+}
+
+button {
+  font-size: 1rem;
+  padding: 5px 15px;
+  margin: 5px auto;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  color: #888;
+  background: #fff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+  button:hover,
+  button:focus {
+    background: var(--med-blue);
+  }
+
+  button:focus {
+    outline: 1px solid #000;
+    outline-offset: -4px;
+  }
+
+  button:active {
+    transform: scale(0.99);
+  }
